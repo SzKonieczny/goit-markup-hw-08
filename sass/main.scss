@@ -1,0 +1,36 @@
+// @use "./utils/variables" as *;
+@import "./utils/variables";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $primaryFontFamily;
+  background-color: $primaryBg;
+  color: $primaryFontColor;
+}
+
+.container {
+  width: 1200px;
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+
+img {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+@import "./components/header";
+@import "./components/section";
+@import "./components/footer";
+@import "./components/modal";

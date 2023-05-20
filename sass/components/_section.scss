@@ -1,0 +1,411 @@
+.solutions {
+  background-color: $primaryHeaderFooterBg;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/img-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.solutions__box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 200px 0px;
+}
+
+.solutions__title {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $primaryTextIconColor;
+  text-align: center;
+  max-width: 696px;
+  width: fit-content;
+}
+
+.button {
+  background-color: $primaryButBgColor;
+  border-radius: $primaryButBorderRadius;
+  cursor: pointer;
+  /* display: flex; */
+  /* align-items: center; */
+  text-align: center;
+
+  &__label {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: $primaryButFontWeight;
+    font-size: $primaryButFontSize;
+    line-height: $primaryButLineHeight;
+    letter-spacing: $primaryButLetterSpacing;
+    color: $primaryTextIconColor;
+    padding: 10px 41px 10px 42px;
+
+    &label--solutions {
+      width: fit-content;
+      // width: 200px;
+      // height: 50px;
+      // padding: 10px 41px 10px 42px;
+    }
+  }
+}
+
+.advantages {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+  }
+
+  &__icon-bg {
+    box-sizing: border-box;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $secondaryButColor;
+    border-radius: $primaryButBorderRadius;
+  }
+
+  &__icon-position {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0px;
+    // padding-bottom: 25px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primaryFontColor;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    /* or 171% */
+    letter-spacing: 0.03em;
+    color: $globalFontDescriptionColor;
+  }
+}
+.job {
+  padding-top: 0px;
+
+  &-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &__list {
+      display: flex;
+      gap: 30px;
+      /* position: relative; */
+    }
+
+    &__item {
+      position: relative;
+    }
+    &__text-bg {
+      position: absolute;
+      background: rgba(47, 48, 58, 0.8);
+      width: 370px;
+      height: 70px;
+      top: 224px;
+      left: 0px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+
+    &__text {
+      color: $primaryTextIconColor;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 0.8;
+      /* text-align: center; */
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.section__title {
+  font-style: normal;
+  font-size: 36px;
+  line-height: 1.2;
+  color: $primaryFontColor;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.team-bg {
+  background-color: $secondaryButColor;
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  &__item {
+    width: 270px;
+    background-color: $primaryBg;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__iconsbox {
+    display: flex;
+    padding: 12px;
+    border-radius: 50%;
+    fill: $heaaderIconFillColor;
+    transition-property: background-color, fill;
+    transition-duration: $globalTransitionDuration;
+    transition-timing-function: $globalTransitionTimingFunction;
+  }
+
+  &__iconsbox:is(:hover, :focus) {
+    background-color: $primaryButBgColor;
+    fill: $primaryTextIconColor;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: $hederFontWeight;
+    font-size: $primaryButFontSize;
+    line-height: 1.2;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primaryFontColor;
+  }
+
+  &__position {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    /* margin-bottom: 30px; */
+  }
+
+  &__profession {
+    font-style: normal;
+    font-weight: 400;
+    font-size: $primaryButFontSize;
+    line-height: 1.2;
+    /* identical to box height */
+    color: $globalFontDescriptionColor;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 16px;
+  }
+}
+
+.clients {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  &__icon {
+    fill: #afb1b8;
+    /* display: block; */
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__icon svg {
+    display: block;
+  }
+
+  &__icon:is(:hover, :focus) {
+    fill: $hoverfocusactiveColor;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__item:is(:hover, :focus) {
+    border-color: $hoverfocusactiveColor;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 30px;
+  }
+}
+
+.filter {
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-bottom: 16px;
+    margin-bottom: 34px;
+  }
+
+  &__button {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.03em;
+    background-color: $secondaryButColor;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    padding: 6px 22px;
+    transition-property: color, background-color, box-shadow;
+    transition-duration: $globalTransitionDuration;
+    transition-timing-function: $globalTransitionTimingFunction;
+  }
+
+  &__button:is(:hover, :focus, :active) {
+    background-color: $primaryButBgColor;
+    color: $primaryTextIconColor;
+    border-color: $primaryButBgColor;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.mesh {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+
+  &__item-bg {
+    position: relative;
+    width: 370px;
+    /* left: 215px;
+  top: 262px; */
+    background-color: $primaryBg;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__item-bg:is(:hover, :focus) {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
+
+  &__box {
+    position: relative;
+    width: 370px;
+    height: 294px;
+    margin: 0 auto;
+    background-color: #fd0202;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translatey(100%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: 0s ease; */
+  }
+
+  &__box:hover &__overlay {
+    transform: translatey(0);
+  }
+
+  &__overlay-description {
+    width: fit-content;
+    max-width: 301px;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    /* or 156% */
+
+    letter-spacing: 0.03em;
+    color: $primaryTextIconColor;
+  }
+
+  &__border {
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+  }
+
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px 24px;
+  }
+
+  &__project-header {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 2;
+    /* identical to box height, or 200% */
+    letter-spacing: 0.06em;
+  }
+
+  &__project-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    /* identical to box height, or 188% */
+    letter-spacing: 0.03em;
+    color: $globalFontDescriptionColor;
+  }
+}
