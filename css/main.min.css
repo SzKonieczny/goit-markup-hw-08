@@ -1857,6 +1857,9 @@ li {
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
   }
+  .modal__close:is(:hover, :focus) {
+    color: #2196f3;
+  }
 }
 .checkbox__checkmark {
   position: absolute;

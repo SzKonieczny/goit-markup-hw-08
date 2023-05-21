@@ -421,6 +421,10 @@
       cursor: pointer;
     }
 
+    &__close:is(:hover, :focus) {
+      color: $hoverfocusactiveColor;
+    }
+
     &__form {
     }
   }
