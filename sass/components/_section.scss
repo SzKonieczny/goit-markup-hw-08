@@ -64,19 +64,28 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) {
   .solutions {
-    width: 768px;
+    min-width: 1200px;
+    max-width: none;
+    max-height: 600px;
 
     background-color: $primaryHeaderFooterBg;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../../images/img-background\ 768x400.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 768px 400px;
+      url("../../images/img-background_1600x600.jpg");
+
+    background-size: 1200px 600px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../../images/img-background_1600x600@2x.jpg");
+
+      background-size: 1600px 600px;
+    }
   }
 
   .solutions__box {
@@ -160,6 +169,7 @@
 
   &__title {
     font-style: normal;
+    font-weight: 700;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.03em;
@@ -201,13 +211,10 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (min-width: 1200px) {
   .advantages {
     &__list {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
+      flex-direction: row;
     }
     &__item {
       display: flex;
@@ -216,29 +223,12 @@
     }
 
     &__icon-bg {
-      box-sizing: border-box;
       width: 270px;
       height: 120px;
-      margin-bottom: 30px;
-      background-color: $secondaryButColor;
-      border-radius: $primaryButBorderRadius;
-    }
-
-    &__icon-position {
-      display: flex;
-      justify-content: center;
-      padding: 25px 0px;
-      // padding-bottom: 25px;
     }
 
     &__title {
-      font-style: normal;
-      font-size: 14px;
-      line-height: 1.2;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: $primaryFontColor;
-      margin-bottom: 10px;
+      text-align: start;
     }
 
     &__description {
@@ -256,9 +246,10 @@
 .job {
   display: none;
 }
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (min-width: 1200px) {
   .job {
     padding-top: 0px;
+    display: flex;
 
     &-elements {
       display: flex;

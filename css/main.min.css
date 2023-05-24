@@ -11,16 +11,18 @@ body {
 
 .container {
   max-width: 480px;
+  width: 100%;
   padding: 0px 15px;
   margin: 0px auto;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
     max-width: 768px;
+    margin: 0px;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
   }
@@ -48,12 +50,12 @@ li {
   color: #212121;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 767px) and (max-width: 1199px) {
   .section {
     padding-bottom: 45px;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -85,7 +87,7 @@ li {
   display: none;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .header {
     max-height: 80px;
   }
@@ -126,11 +128,11 @@ li {
     gap: 10px;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .header__contact {
     display: -webkit-box;
@@ -160,10 +162,10 @@ li {
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header__contact--email {
-    margin-left: 370px;
+    margin-left: 345px;
   }
   .header__contact--phone {
-    margin-left: 50px;
+    margin-left: 30px;
   }
   .header__contact:is(:hover, :focus, :active) {
     color: #2196f3;
@@ -171,14 +173,15 @@ li {
   }
   .gap {
     display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 .page-header {
   border-bottom: 1px solid #ececec;
-  max-width: 480px;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .page-header {
     max-width: 780px;
   }
@@ -198,9 +201,8 @@ li {
 
 @media screen and (min-width: 769px) and (min-width: 1200px) {
   .page-header {
-    border-bottom: 1px solid #ececec;
-    max-width: 1200px;
-    text-align: center;
+    min-width: 1200px;
+    margin: 0px auto;
   }
 }
 .logo {
@@ -260,7 +262,7 @@ li {
   list-style: none;
 }
 
-@media (min-width: 480px) {
+@media (max-width: 4px) {
   .menu {
     display: none;
   }
@@ -411,7 +413,7 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 30px;
+    gap: 46px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -429,7 +431,7 @@ li {
     border-radius: 2px;
     background-color: #2196f3;
     display: block;
-    margin-top: 28px;
+    margin-top: 18px;
   }
   .nav__link {
     width: -webkit-fit-content;
@@ -511,16 +513,24 @@ li {
     background-size: 768px 400px;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) {
   .solutions {
-    width: 768px;
+    min-width: 1200px;
+    max-width: none;
+    max-height: 600px;
     background-color: #2f303a;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/img-background 768x400.jpg");
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/img-background 768x400.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 768px 400px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/img-background_1600x600.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/img-background_1600x600.jpg");
+    background-size: 1200px 600px;
   }
+}
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .solutions {
+    background-image: url("../../images/img-background_1600x600@2x.jpg");
+    background-size: 1600px 600px;
+  }
+}
+@media screen and (min-width: 769px) {
   .solutions__box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -538,6 +548,8 @@ li {
     gap: 30px;
     padding: 200px 0px;
   }
+}
+@media screen and (min-width: 769px) {
   .solutions__title {
     font-style: normal;
     font-weight: 900;
@@ -617,6 +629,7 @@ li {
 }
 .advantages__title {
   font-style: normal;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -654,18 +667,12 @@ li {
     max-width: 354px;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (min-width: 1200px) {
   .advantages__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .advantages__item {
     display: -webkit-box;
@@ -678,31 +685,11 @@ li {
     /* gap: 10px; */
   }
   .advantages__icon-bg {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
     width: 270px;
     height: 120px;
-    margin-bottom: 30px;
-    background-color: #f5f4fa;
-    border-radius: 4px;
-  }
-  .advantages__icon-position {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 25px 0px;
   }
   .advantages__title {
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #212121;
-    margin-bottom: 10px;
+    text-align: start;
   }
   .advantages__description {
     font-style: normal;
@@ -718,9 +705,12 @@ li {
   display: none;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (min-width: 1200px) {
   .job {
     padding-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .job-elements {
     display: -webkit-box;
