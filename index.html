@@ -63,26 +63,27 @@
             <li><a href="" class="link">Career</a></li>
           </ul>
         </div>
+        <div class="gap">
+          <a
+            class="header__contact header__contact--email"
+            href="mailto:info@devstudio.com"
+          >
+            <svg width="14" height="10">
+              <use href="./images/icons/icons.svg#icon-envelope"></use>
+            </svg>
+            <span>info@devstudio.com </span></a
+          >
 
-        <a
-          href="mailto:info@devstudio.com"
-          class="header__contact header__contact--email"
-        >
-          <svg width="16" height="12">
-            <use href="./images/icons/icons.svg#icon-envelope"></use>
-          </svg>
-          info@devstudio.com</a
-        >
-
-        <a
-          href="tel:+48111111111"
-          class="header__contact header__contact--phone"
-        >
-          <svg width="10" height="16">
-            <use href="./images/icons/icons.svg#icon-smartphone"></use>
-          </svg>
-          +48 111 111 111</a
-        >
+          <a
+            href="tel:+48111111111"
+            class="header__contact header__contact--phone"
+          >
+            <svg width="10" height="16">
+              <use href="./images/icons/icons.svg#icon-smartphone"></use>
+            </svg>
+            +48 111 111 111</a
+          >
+        </div>
       </div>
     </header>
     <!--main section-->
@@ -217,12 +218,30 @@
           <h2 class="section__title">Nasz zespół</h2>
           <ul class="members__list">
             <li class="members__item">
-              <img
-                src="./images/our_team/product_designer_450x460_img.jpg"
-                alt="Zdjecie John Doe"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our_team/product_designer_450x460_480w.jpg 480w,
+                    ./images/our_team/product_designer_450x460_900w.jpg 900w
+                  "
+                  media="(max-width: 480px)"
+                  sizes="450px 460px"
+                />
+
+                <source
+                  srcset="
+                    ./images/our_team/product_designer_img_354x374_768w.jpg   768w,
+                    ./images/our_team/product_designer_img_354x374_1536w.jpg 1536w
+                  "
+                  media="(max-width: 768px)"
+                  sizes="354px 376px"
+                />
+
+                <img
+                  src="./images/our_team/product_designer_img.jpg"
+                  alt="Zdjecie John Doe"
+                />
+              </picture>
               <div class="members__position">
                 <h3 class="members__name">John Doe</h3>
                 <p class="members__profession">Product Designer</p>
@@ -266,12 +285,30 @@
               </ul>
             </li>
             <li class="members__item">
-              <img
-                src="./images/our_team/frontend_developer_450x460_img.jpg"
-                alt="Zdjecie John Doe"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our_team/frontend_developer_450x460_480w.jpg 480w,
+                    ./images/our_team/frontend_developer_450x460_900w.jpg 900w
+                  "
+                  media="(max-width: 480px)"
+                  sizes="450px 460px"
+                />
+                <source
+                  srcset="
+                    ./images/our_team/frontend_developer_354x374_354w.jpg 354w,
+                    ./images/our_team/frontend_developer_354x374_708w.jpg 768w
+                  "
+                  media="(max-width: 768px)"
+                  sizes="354px 376px"
+                />
+
+                <img
+                  src="./images/our_team/frontend_developer_img.jpg"
+                  alt="Zdjecie John Doe"
+                />
+              </picture>
+
               <div class="members__position">
                 <h3 class="members__name">John Doe</h3>
                 <p class="members__profession">Frontend Developer</p>
@@ -315,12 +352,30 @@
               </ul>
             </li>
             <li class="members__item">
-              <img
-                src="./images/our_team/marketing_450x460_img.jpg"
-                alt="Zdjecie John Doe"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our_team/marketing_450x460_480w.jpg 480w,
+                    ./images/our_team/marketing_450x460_900w.jpg 900w
+                  "
+                  media="(max-width: 480px)"
+                  sizes="450px 460px"
+                />
+                <source
+                  srcset="
+                    ./images/our_team/marketing_354x374_354w.jpg 354w,
+                    ./images/our_team/marketing_354x374_708w.jpg 768w
+                  "
+                  media="(max-width: 768px)"
+                  sizes="354px 376px"
+                />
+
+                <img
+                  src="./images/our_team/marketing_img.jpg"
+                  alt="Zdjecie John Doe"
+                />
+              </picture>
+
               <div class="members__position">
                 <h3 class="members__name">John Doe</h3>
                 <p class="members__profession">Marketing</p>
@@ -364,12 +419,31 @@
               </ul>
             </li>
             <li class="members__item">
-              <img
-                src="./images/our_team/ui_designer_450x460_img.jpg"
-                alt="Zdjecie John Doe"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our_team/ui_designer_450x460_480w.jpg 480w,
+                    ./images/our_team/ui_designer_450x460_900w.jpg 900w
+                  "
+                  media="(max-width: 480px)"
+                  sizes="450px 460px"
+                  src="./images/our_team/ui_designer_450x460_900w.jpg"
+                />
+                <source
+                  srcset="
+                    ./images/our_team/ui_designer_354x374_354w.jpg 354w,
+                    ./images/our_team/ui_designer_354x374_708w.jpg 768w
+                  "
+                  media="(max-width: 768px)"
+                  sizes="354px 376px"
+                />
+
+                <img
+                  src="./images/our_team/ui_designer_img.jpg"
+                  alt="Zdjecie John Doe"
+                />
+              </picture>
+
               <div class="members__position">
                 <h3 class="members__name">John Doe</h3>
                 <p class="members__profession">UI Designer</p>

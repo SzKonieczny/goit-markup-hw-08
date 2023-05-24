@@ -1,6 +1,6 @@
 .solutions {
-  width: 480px;
-  height: 400px;
+  max-width: 480px;
+  max-height: 400px;
   background-color: $primaryHeaderFooterBg;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
@@ -9,8 +9,17 @@
     url("../../images/img-background\ 480x400.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: cover;
+  background-size: 480px 400px;
 
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../images/img-background\ 480x400@2x.jpg");
+  }
   &__box {
     display: flex;
     justify-content: center;
@@ -34,17 +43,40 @@
   }
 }
 
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .solutions {
+    max-width: 768px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../images/img-background\ 768x400.jpg");
+
+    background-size: 768px 400px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../../images/img-background\ 768x400@2x.jpg");
+
+      background-size: 768px 400px;
+    }
+  }
+}
+
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .solutions {
+    width: 768px;
+
     background-color: $primaryHeaderFooterBg;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/img-background.jpg");
+      url("../../images/img-background\ 768x400.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: 768px 400px;
   }
 
   .solutions__box {
@@ -148,6 +180,27 @@
   }
 }
 
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .advantages {
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__icon-bg {
+      max-width: 354px;
+    }
+
+    &__title {
+      text-align: start;
+    }
+
+    &__description {
+      max-width: 354px;
+    }
+  }
+}
+
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .advantages {
     &__list {
@@ -203,7 +256,7 @@
 .job {
   display: none;
 }
-@media screen and (min-width: 769px) and (max-width: 1200) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
   .job {
     padding-top: 0px;
 
@@ -249,6 +302,11 @@
 .team-bg {
   background-color: $secondaryButColor;
 }
+@media (min-width: 481px) and (max-width: 768px) {
+  .team-bg {
+    padding-bottom: 60px;
+  }
+}
 
 .members {
   display: flex;
@@ -256,7 +314,7 @@
   gap: 30px;
 
   &__item {
-    width: 450px;
+    max-width: 450px;
     background-color: $primaryBg;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -329,7 +387,20 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200) {
+@media (min-width: 481px) and (max-width: 768px) {
+  .members {
+    &__item {
+      max-width: 354px;
+    }
+
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
   .members {
     display: flex;
     flex-direction: column;
@@ -453,7 +524,17 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .clients {
+    padding-bottom: 15px;
+    &__item {
+      min-width: 226px;
+      max-height: 92px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
   .clients {
     display: flex;
     flex-direction: column;

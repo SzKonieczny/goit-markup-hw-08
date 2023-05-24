@@ -20,20 +20,19 @@ body {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .container {
     max-width: 768px;
-    padding: 0px 15px;
-    margin: 0px auto;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) {
   .container {
-    width: 1200px;
-    margin: 0px auto;
+    max-width: 1200px;
   }
 }
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 li {
@@ -54,7 +53,13 @@ li {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media (min-width: 481px) and (max-width: 768px) {
+  .section {
+    padding-bottom: 45px;
+  }
+}
+
+@media (min-width: 769px) {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
