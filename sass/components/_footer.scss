@@ -1,7 +1,6 @@
 .footer {
   background-color: $primaryHeaderFooterBg;
   padding: 60px 0px;
-
   &__address-contact {
     font-style: normal;
     font-weight: 400;
@@ -14,86 +13,62 @@
     transition-duration: $globalTransitionDuration;
     transition-timing-function: $globalTransitionTimingFunction;
   }
-
   &__address-contact:is(:hover, :focus, :active) {
     color: $primaryButBgColor;
   }
-}
+  .footer-input {
+    width: 450px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+    border-radius: $primaryButBorderRadius;
+    background-color: $primaryHeaderFooterBg;
+    color: rgba(255, 255, 255, 0.3);
+    padding-left: 16px;
+    @include desktop {
+      min-width: 358px;
+    }
+  }
 
-.footer-input {
-  width: 450px;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
-  border-radius: $primaryButBorderRadius;
-  background-color: $primaryHeaderFooterBg;
-  color: rgba(255, 255, 255, 0.3);
-  padding-left: 16px;
-}
-
-.footer-input:is(:hover, :focus) {
-  border-color: $primaryButBgColor;
+  .footer-input:is(:hover, :focus) {
+    border-color: $primaryButBgColor;
+  }
 }
 
 .page-footer {
   display: flex;
   gap: 60px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  &__address {
-    display: flex;
-    gap: 9px;
-    flex-direction: column;
-    width: fit-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include tablet {
+    justify-content: space-around;
   }
-
-  &__button {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    min-width: 200px;
-    /* background: #2196f3; */
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    /* border-radius: 4px; */
-    gap: 24px;
-    padding-left: 42px;
-    /* cursor: pointer; */
-  }
-
-  &__label {
-    padding: 0px;
-    font-weight: $primaryButFontWeight;
-    font-size: $primaryButFontSize;
-    line-height: $primaryButLineHeight;
-    letter-spacing: $primaryButLetterSpacing;
-    color: $primaryTextIconColor;
-  }
-
-  &__form {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-direction: column;
+  @include desktop {
+    justify-content: start;
+    gap: 0px;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
     /* width: fit-content; */
     /* margin-right: 0px; */
+    @include desktop {
+      align-items: start;
+    }
   }
-
-  &__newsletter {
+  &__address {
     display: flex;
+    gap: 9px;
     flex-direction: column;
-    gap: 20px;
-    // padding-top: 0px;
-    // margin-left: 8px;
+    width: fit-content;
+    text-align: center;
+    @include desktop {
+      text-align: start;
+    }
   }
-
   &__street {
     font-style: normal;
     font-weight: 400;
@@ -103,7 +78,32 @@
     letter-spacing: 0.03em;
     color: $primaryTextIconColor;
   }
-
+  &__social-media {
+    text-align: center;
+    @include desktop {
+      padding-top: 12px;
+      margin-left: 70px;
+    }
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primaryTextIconColor;
+    text-align: center;
+    @include desktop {
+      text-align: start;
+    }
+  }
+  &__social-icons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 10px;
+  }
   &__social-link {
     width: 44px;
     height: 44px;
@@ -120,131 +120,42 @@
   &__social-link:is(:hover, :focus) {
     background-color: $hoverfocusactiveColor;
   }
-
-  &__social-media {
-    padding-top: 0px;
-  }
-
-  &__social-icons {
+  &__newsletter {
     display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    gap: 10px;
+    flex-direction: column;
+    gap: 20px;
+    @include desktop {
+      padding-top: 12px;
+      margin-left: 78px;
+    }
   }
-
-  &__title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $primaryTextIconColor;
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .page-footer {
-    flex-direction: row;
+  &__form {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-  .page-footer {
-    display: flex;
-    gap: 70px;
-
-    &__address {
-      display: flex;
-      gap: 9px;
-      flex-direction: column;
-      width: fit-content;
+    @include tablet {
+      max-width: 450px;
     }
-
-    &__button {
-      display: flex;
-      align-items: center;
-      height: 50px;
-      width: 200px;
-      /* background: #2196f3; */
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-      /* border-radius: 4px; */
-      gap: 24px;
-      padding-left: 42px;
-      /* cursor: pointer; */
-    }
-
-    &__form {
-      display: flex;
-      align-items: center;
+    @include desktop {
+      flex-wrap: nowrap;
       gap: 12px;
+      justify-content: start;
     }
-
-    &__item {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      /* width: fit-content; */
-      /* margin-right: 0px; */
-    }
-
-    &__newsletter {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding-top: 12px;
-      margin-left: 8px;
-    }
-
-    &__street {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.7;
-      /* or 171% */
-      letter-spacing: 0.03em;
-      color: $primaryTextIconColor;
-    }
-
-    &__social-link {
-      width: 44px;
-      height: 44px;
-      background: rgba(255, 255, 255, 0.1);
-      display: flex;
-      padding: 12px;
-      border-radius: 50%;
-      fill: $primaryTextIconColor;
-      transition-property: background-color;
-      transition-duration: $globalTransitionDuration;
-      transition-timing-function: $globalTransitionTimingFunction;
-    }
-
-    &__social-link:is(:hover, :focus) {
-      background-color: $hoverfocusactiveColor;
-    }
-
-    &__social-media {
-      padding-top: 12px;
-    }
-
-    &__social-icons {
-      display: flex;
-      flex-direction: row;
-      margin-top: 20px;
-      gap: 10px;
-    }
-
-    &__title {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: $primaryTextIconColor;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    /* background: #2196f3; */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    /* border-radius: 4px; */
+    gap: 24px;
+    padding-left: 42px;
+    /* cursor: pointer; */
+    @include desktop {
+      min-width: 200px;
     }
   }
 }

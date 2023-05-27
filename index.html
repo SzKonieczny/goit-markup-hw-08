@@ -33,18 +33,49 @@
           <div>
             <a href="#" class="nav__link">Kontakt</a>
           </div>
+          <!-- <ul>
+            <li>
+              <div class="nav-underline">
+                <a href="./index.html" class="navigation-menu-link-agency"
+                  >Agencja</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="navigation-menu-link-portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="#" class="navigation-menu-link-contact">Kontakt</a>
+            </li>
+          </ul> -->
         </nav>
+        <div class="header__contact">
+          <a href="mailto:info@devstudio.com" class="header__link">
+            <svg width="16" height="12">
+              <use href="./images/icons/icons.svg#icon-envelope"></use>
+            </svg>
+            info@devstudio.com</a
+          >
 
-        <div class="page-header__container">
+          <a href="tel:+48111111111" class="header__link">
+            <svg width="10" height="16">
+              <use href="./images/icons/icons.svg#icon-smartphone"></use>
+            </svg>
+            +48 111 111 111</a
+          >
+        </div>
+
+        <div>
           <button
             class="menu-toggle js-open-menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
           >
             <svg
-              width="24"
-              height="24"
-              fill="currentColor"
+              width="40"
+              height="40"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -55,39 +86,12 @@
               ></path>
             </svg>
           </button>
-
-          <ul class="menu">
-            <li><a href="" class="link">Agencja</a></li>
-            <li><a href="" class="link">Portfolio</a></li>
-            <li><a href="#" class="link">Kontakt</a></li>
-            <li><a href="" class="link">Career</a></li>
-          </ul>
-        </div>
-        <div class="gap">
-          <a
-            class="header__contact header__contact--email"
-            href="mailto:info@devstudio.com"
-          >
-            <svg width="14" height="10">
-              <use href="./images/icons/icons.svg#icon-envelope"></use>
-            </svg>
-            <span>info@devstudio.com </span></a
-          >
-
-          <a
-            href="tel:+48111111111"
-            class="header__contact header__contact--phone"
-          >
-            <svg width="10" height="16">
-              <use href="./images/icons/icons.svg#icon-smartphone"></use>
-            </svg>
-            +48 111 111 111</a
-          >
         </div>
       </div>
     </header>
     <!--main section-->
     <main>
+      <!-- Job -->
       <section class="solutions">
         <div class="container solutions__box">
           <h1 class="solutions__title">
@@ -103,6 +107,7 @@
         </div>
       </section>
 
+      <!-- Nasze atuty -->
       <section class="section">
         <div class="container advantages">
           <ul class="advantages__list">
@@ -166,18 +171,31 @@
         </div>
       </section>
 
+      <!-- what we do -->
       <section class="section job">
         <div class="container job-elements">
           <h2 class="section__title">Czym się zajmujemy</h2>
           <ul class="job-elements__list">
             <li class="job-elements__item">
               <div>
-                <img
-                  src="./images/what_we_do/what_we_do_img1.jpg"
-                  alt="Pisanie kodu HTML"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 1200px)"
+                    srcset="./images/what_we_do/what_we_do_1_370x294.jpg 1200w"
+                  />
+                  <source
+                    media="(min-width: 1201px) and (max-width: 1600px)"
+                    srcset="
+                      ./images/what_we_do/what_we_do_1_370x294@x2.jpg 2400w
+                    "
+                  />
+                  <img
+                    src="./images/what_we_do/what_we_do_img1.jpg"
+                    alt="Pisanie kodu HTML"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
               </div>
               <div class="job-elements__text-bg">
                 <p class="job-elements__text">APLIKACJE KOMPUTEROWE</p>
@@ -185,12 +203,24 @@
             </li>
             <li class="job-elements__item">
               <div>
-                <img
-                  src="./images/what_we_do/what_we_do_img2.jpg"
-                  alt="CSS class"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 1200px)"
+                    srcset="./images/what_we_do/what_we_do_2_370x294.jpg 1200w"
+                  />
+                  <source
+                    media="(min-width: 1201px) and (max-width: 1600px)"
+                    srcset="
+                      ./images/what_we_do/what_we_do_2_370x294@2x.jpg 2400w
+                    "
+                  />
+                  <img
+                    src="./images/what_we_do/what_we_do_img2.jpg"
+                    alt="CSS class"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
               </div>
               <div class="job-elements__text-bg">
                 <p class="job-elements__text">APLIKACJE MOBILNE</p>
@@ -198,12 +228,24 @@
             </li>
             <li class="job-elements__item">
               <div>
-                <img
-                  src="./images/what_we_do/what_we_do_img3.jpg"
-                  alt="Wybor kolorow z palety kolorow"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 1200px)"
+                    srcset="./images/what_we_do/what_we_do_3_370x294.jpg 1200w"
+                  />
+                  <source
+                    media="(min-width: 1201px) and (max-width: 1600px)"
+                    srcset="
+                      ./images/what_we_do/what_we_do_3_370x294@2x.jpg 2400w
+                    "
+                  />
+                  <img
+                    src="./images/what_we_do/what_we_do_img3.jpg"
+                    alt="Wybor kolorow z palety kolorow"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
               </div>
               <div class="job-elements__text-bg">
                 <p class="job-elements__text">ROZWIAZANIA GRAFICZNE</p>
@@ -213,6 +255,7 @@
         </div>
       </section>
 
+      <!-- Nasz zespół -->
       <section class="team-bg section">
         <div class="container members">
           <h2 class="section__title">Nasz zespół</h2>
@@ -220,28 +263,47 @@
             <li class="members__item">
               <picture>
                 <source
-                  srcset="
-                    ./images/our_team/product_designer_450x460_480w.jpg 480w,
-                    ./images/our_team/product_designer_450x460_900w.jpg 900w
-                  "
                   media="(max-width: 480px)"
-                  sizes="450px 460px"
+                  srcset="./images/our_team/product_designer_450x460.jpg 480w"
+                />
+                <source
+                  media="(min-width: 481px) and (max-width: 767px)"
+                  srcset="
+                    ./images/our_team/product_designer_450x460@2x.jpg 900w
+                  "
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="
+                    ./images/our_team/product_designer_img_354x374.jpg 768w
+                  "
+                />
+                <source
+                  media="(min-width:769px) and (max-width:1199px)"
+                  srcset="
+                    ./images/our_team/product_designer_img_354x374@2x.jpg 1536w
+                  "
                 />
 
                 <source
+                  media="(max-width: 1200px)"
+                  srcset="./images/our_team/product_designer_270x260.jpg 270w"
+                />
+                <source
+                  media="(min-width:1201px) and (max-width:1600px)"
                   srcset="
-                    ./images/our_team/product_designer_img_354x374_768w.jpg   768w,
-                    ./images/our_team/product_designer_img_354x374_1536w.jpg 1536w
+                    ./images/our_team/product_designer_270x260@2x.jpg 540w
                   "
-                  media="(max-width: 768px)"
-                  sizes="354px 376px"
                 />
 
                 <img
                   src="./images/our_team/product_designer_img.jpg"
                   alt="Zdjecie John Doe"
+                  max-width="270"
+                  max-height="260"
                 />
               </picture>
+
               <div class="members__position">
                 <h3 class="members__name">John Doe</h3>
                 <p class="members__profession">Product Designer</p>
@@ -287,25 +349,41 @@
             <li class="members__item">
               <picture>
                 <source
-                  srcset="
-                    ./images/our_team/frontend_developer_450x460_480w.jpg 480w,
-                    ./images/our_team/frontend_developer_450x460_900w.jpg 900w
-                  "
                   media="(max-width: 480px)"
-                  sizes="450px 460px"
-                />
-                <source
-                  srcset="
-                    ./images/our_team/frontend_developer_354x374_354w.jpg 354w,
-                    ./images/our_team/frontend_developer_354x374_708w.jpg 768w
-                  "
-                  media="(max-width: 768px)"
-                  sizes="354px 376px"
+                  srcset="./images/our_team/frontend_developer_450x460.jpg 480w"
                 />
 
+                <source
+                  media="(min-width: 481px) and (max-width:767px)"
+                  srcset="
+                    ./images/our_team/frontend_developer_450x460@2x.jpg 900w
+                  "
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./images/our_team/frontend_developer_354x374.jpg 768w"
+                />
+                <source
+                  media="(min-width:769px) and (max-width:1199px) "
+                  srcset="
+                    ./images/our_team/frontend_developer_354x374@2x.jpg 1536w
+                  "
+                />
+                <source
+                  media="(max-width: 1200px)"
+                  srcset="./images/our_team/frontend_developer_270x260.jpg 270w"
+                />
+                <source
+                  media="(min-width:1201px) and (max-width:1600px)"
+                  srcset="
+                    ./images/our_team/frontend_developer_270x260@2x.jpg 540w
+                  "
+                />
                 <img
                   src="./images/our_team/frontend_developer_img.jpg"
                   alt="Zdjecie John Doe"
+                  max-width="270"
+                  max-height="260"
                 />
               </picture>
 
@@ -354,25 +432,37 @@
             <li class="members__item">
               <picture>
                 <source
-                  srcset="
-                    ./images/our_team/marketing_450x460_480w.jpg 480w,
-                    ./images/our_team/marketing_450x460_900w.jpg 900w
-                  "
                   media="(max-width: 480px)"
-                  sizes="450px 460px"
+                  srcset="./images/our_team/marketing_450x460.jpg 480w"
+                />
+
+                <source
+                  media="(min-width: 481px) and (max-width: 767px)"
+                  srcset="./images/our_team/marketing_450x460@2x.jpg 900w"
+                />
+
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./images/our_team/marketing_354x374.jpg 768w"
                 />
                 <source
-                  srcset="
-                    ./images/our_team/marketing_354x374_354w.jpg 354w,
-                    ./images/our_team/marketing_354x374_708w.jpg 768w
-                  "
-                  media="(max-width: 768px)"
-                  sizes="354px 376px"
+                  media="(min-width:769px) and (max-width:1199px)"
+                  srcset="./images/our_team/marketing_354x374@2x.jpg 1536w"
+                />
+                <source
+                  media="(max-width: 1200px)"
+                  srcset="./images/our_team/marketing_270x260.jpg 270w"
+                />
+                <source
+                  media="(min-width:1201px) and (max-width:1600px)"
+                  srcset="./images/our_team/marketing_270x260@2x.jpg 540w"
                 />
 
                 <img
                   src="./images/our_team/marketing_img.jpg"
                   alt="Zdjecie John Doe"
+                  max-width="270"
+                  max-height="260"
                 />
               </picture>
 
@@ -421,26 +511,38 @@
             <li class="members__item">
               <picture>
                 <source
-                  srcset="
-                    ./images/our_team/ui_designer_450x460_480w.jpg 480w,
-                    ./images/our_team/ui_designer_450x460_900w.jpg 900w
-                  "
                   media="(max-width: 480px)"
-                  sizes="450px 460px"
-                  src="./images/our_team/ui_designer_450x460_900w.jpg"
+                  srcset="./images/our_team/ui_designer_450x460.jpg 480w"
+                />
+
+                <source
+                  media="(min-width: 481px) and (max-width:767px)"
+                  srcset="./images/our_team/ui_designer_450x460@2x.jpg 900w"
+                />
+
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./images/our_team/ui_designer_354x374.jpg 768w"
                 />
                 <source
-                  srcset="
-                    ./images/our_team/ui_designer_354x374_354w.jpg 354w,
-                    ./images/our_team/ui_designer_354x374_708w.jpg 768w
-                  "
-                  media="(max-width: 768px)"
-                  sizes="354px 376px"
+                  media="(min-width:769px) and (max-width:1199px)"
+                  srcset="./images/our_team/ui_designer_354x374@2x.jpg 1536w"
+                />
+                <source
+                  media="(max-width: 1200px)"
+                  srcset="./images/our_team/ui_designer_270x260.jpg 270w"
+                  src=""
+                />
+                <source
+                  media="(min-width:1201px) and (max-width:1600px)"
+                  srcset="./images/our_team/ui_designer_270x260@2x.jpg 540w"
                 />
 
                 <img
                   src="./images/our_team/ui_designer_img.jpg"
                   alt="Zdjecie John Doe"
+                  max-width="270"
+                  max-height="260"
                 />
               </picture>
 
@@ -489,7 +591,7 @@
           </ul>
         </div>
       </section>
-
+      <!-- Nasi klienci -->
       <section class="section">
         <div class="container clients">
           <h2 class="section__title">Nasi klienci</h2>
@@ -531,7 +633,7 @@
             </li>
             <li class="clients__item">
               <a class="clients__icon" href="#"
-                ><svg width="106" height="60">
+                ><svg width="106" height="">
                   <use href="./images/icons/icons.svg#icon-Client-6"></use>
                 </svg>
               </a>
@@ -607,7 +709,7 @@
               required
             />
             <button type="submit" class="button page-footer__button">
-              <span class="page-footer__label">Zapisz sie</span>
+              <span class="button__label">Zapisz sie</span>
               <svg width="24" height="24">
                 <use href="./images/icons/icons.svg#icon-icon-send"></use>
               </svg>
@@ -674,6 +776,16 @@
             </label>
           </div>
           <div class="form__box">
+            <!-- <label for="phone">Komentarz</label>
+            <label class="input-text">
+              <input
+                class="input-text-width"
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Wprowadz text"
+              />
+            </label> -->
             <label>
               <span class="form__labels">Komentarz</span>
               <textarea
@@ -701,16 +813,14 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
 
     <div class="menu-container js-menu-container" id="mobile-menu">
       <button class="menu-toggle js-close-menu">
         <svg
-          fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="40"
+          height="40"
         >
           <path
             fill-rule="evenodd"
@@ -719,20 +829,72 @@
           ></path>
         </svg>
       </button>
-
-      <ul class="mobile-menu">
-        <li><a href="./index.html" class="link">Agencja</a></li>
-        <li><a href="./portfolio.html" class="link">Portfolio</a></li>
-        <li><a href="#" class="link">Kontakt</a></li>
-      </ul>
-      <div>
-        <a href="tel:+48111111111" class="mobile-menu-phone">+48 111 111 111</a>
-      </div>
-      <div>
-        <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+      <div class="mobile-menu">
+        <ul class="mobile-menu__list">
+          <li>
+            <div class="mobile-menu__underline">
+              <a href="./index.html" class="mobile-menu__link">Agencja</a>
+            </div>
+          </li>
+          <li>
+            <a href="./portfolio.html" class="mobile-menu__link">Portfolio</a>
+          </li>
+          <li><a href="#" class="mobile-menu__link">Kontakt</a></li>
+        </ul>
+        <div class="mobile-menu__contact">
+          <ul class="mobile-menu__contact-list">
+            <li>
+              <a class="mobile-menu__phone" href="tel:+48111111111">
+                +48 111 111 111</a
+              >
+            </li>
+            <li>
+              <a class="mobile-menu__email" href="mailto:info@devstudio.com">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-menu__social">
+          <figure tabindex="0">
+            <div>
+              <figcaption class="mobile-menu__social-border">
+                <p class="mobile-menu__social-name">Instagram</p>
+              </figcaption>
+            </div>
+          </figure>
+          <figure>
+            <div>
+              <figcaption class="mobile-menu__social-border">
+                <p class="mobile-menu__social-name mobile-menu__socioal-offset">
+                  Twitter
+                </p>
+              </figcaption>
+            </div>
+          </figure>
+          <figure>
+            <div>
+              <figcaption class="mobile-menu__social-border">
+                <p class="mobile-menu__social-name mobile-menu__socioal-offset">
+                  Facebook
+                </p>
+              </figcaption>
+            </div>
+          </figure>
+          <figure>
+            <div>
+              <figcaption>
+                <p class="mobile-menu__social-name mobile-menu__socioal-offset">
+                  LinkedIm
+                </p>
+              </figcaption>
+            </div>
+          </figure>
+        </div>
       </div>
     </div>
 
+    <script src="./js/modal.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"

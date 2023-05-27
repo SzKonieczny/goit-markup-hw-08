@@ -1,5 +1,7 @@
 // @use "./utils/variables" as *;
 @import "./utils/variables";
+@import "./utils/mixins";
+
 * {
   margin: 0;
   padding: 0;
@@ -13,21 +15,15 @@ body {
 
 .container {
   max-width: 480px;
-  width: 100%;
   padding: 0px 15px;
   margin: 0px auto;
-}
+  width: 100%;
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .container {
-    max-width: 768px;
-    margin: 0px;
+  @include tablet {
+    min-width: 768px;
   }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
+  @include desktop {
+    min-width: 1200px;
   }
 }
 
@@ -44,36 +40,21 @@ li {
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-
   &__title {
+    font-style: normal;
     font-weight: 700;
     font-size: 28px;
     line-height: 1.2;
-    text-align: center;
+    color: $primaryFontColor;
     letter-spacing: 0.03em;
-    color: #212121;
+    text-align: center;
+    @include desktop {
+      font-size: 36px;
+    }
   }
-}
-
-@media (min-width: 767px) and (max-width: 1199px) {
-  .section {
-    padding-bottom: 45px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .section {
+  @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;
-
-    &__title {
-      font-style: normal;
-      font-size: 36px;
-      line-height: 1.2;
-      color: $primaryFontColor;
-      letter-spacing: 0.03em;
-      text-align: center;
-    }
   }
 }
 
