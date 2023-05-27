@@ -82,7 +82,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../../images/background/Img_bg_1600x600.jpg");
+      url("../../images/background/Imgbg1600x600.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -92,7 +92,7 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       .solutions {
-        background-image: url("../../images/background/Img_bg_1600x600@2x.jpg");
+        background-image: url("../../images/Img_bg_1600x600@2x.jpg");
         background-size: cover;
       }
     }
