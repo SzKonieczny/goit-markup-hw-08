@@ -488,7 +488,7 @@ li {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .solutions .solutions {
-    background-image: url("../../../goit-markup-hw-08/images/background/Imgbg1600x600@2x.jpg");
+    background-image: url("../../images/background/Imgbg1600x600@2x.jpg");
     background-size: cover;
   }
 }
