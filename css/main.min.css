@@ -407,15 +407,15 @@ li {
 
 .solutions {
   background-color: #2f303a;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/background/img_background_480x400.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background/img_background_480x400.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../../goit-markup-hw-08/images/background/img_background_480x400.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../../goit-markup-hw-08/images/background/img_background_480x400.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .solutions .solutions {
-    background-image: url("../../images/background/img_background_480x400@2x.jpg");
+    background-image: url("../../../goit-markup-hw-08/images/background/img_background_480x400@2x.jpg");
     background-size: cover;
   }
 }
@@ -463,8 +463,8 @@ li {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .solutions {
     background-color: #2f303a;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/background/img_background_768x400.jpg");
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background/img_background_768x400.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../../goit-markup-hw-08/images/background/img_background_768x400.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../../goit-markup-hw-08/images/background/img_background_768x400.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -472,15 +472,15 @@ li {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .solutions .solutions {
-    background-image: url("../../images/background/img_background_768x400@2x.jpg");
+    background-image: url("../../../goit-markup-hw-08/images/background/img_background_768x400@2x.jpg");
     background-size: cover;
   }
 }
 @media screen and (min-width: 1200px) {
   .solutions {
     background-color: #2f303a;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/background/Imgbg1600x600.jpg");
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background/Imgbg1600x600.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../../goit-markup-hw-08/images/background/Imgbg1600x600.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../../goit-markup-hw-08/images/background/Imgbg1600x600.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -488,7 +488,7 @@ li {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .solutions .solutions {
-    background-image: url("../../images/Img_bg_1600x600@2x.jpg");
+    background-image: url("../../../goit-markup-hw-08/images/background/Imgbg1600x600@2x.jpg");
     background-size: cover;
   }
 }
