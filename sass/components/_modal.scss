@@ -15,7 +15,7 @@
   transition-property: opacity, visibility;
   /* opacity: 0.5; */
   /* visibility: visible; */
-  transition-duration: 2s;
+  transition-duration: 1s;
 }
 
 .modal {
@@ -283,7 +283,7 @@
 .checkbox__checkmark {
   position: absolute;
   align-items: center;
-  left: 0px;
+  left: 14px;
   height: 15px;
   width: 16px;
   margin-right: 0px;

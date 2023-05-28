@@ -97,6 +97,9 @@
   @include desktop {
     gap: 46px;
     margin-left: 93px;
+    // transition-property: color;
+    transition-duration: $globalTransitionDuration;
+    transition-timing-function: $globalTransitionTimingFunction;
   }
   &__underline {
     position: relative;
@@ -123,6 +126,9 @@
 
   &__link:is(:hover, :focus) {
     color: $hoverfocusactiveColor;
+  }
+  &__link--active {
+    color: #2196f3;
   }
 }
 
@@ -234,6 +240,23 @@
     flex-direction: column;
     gap: 36px;
   }
+
+  &__underline {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      max-width: 139px;
+      width: 100%;
+      height: 4px;
+
+      border-radius: 2px;
+      background-color: $hoverfocusactiveColor;
+      display: block;
+      margin-top: 1.3px;
+    }
+  }
+
   &__link {
     color: #000000;
     text-decoration: none;
@@ -242,9 +265,14 @@
     line-height: 1.2;
     letter-spacing: 0.02em;
   }
+
   &__link:is(:hover, :focus) {
     color: $hoverfocusactiveColor;
-    text-decoration: underline;
+    // text-decoration: underline;
+  }
+
+  &__link--active {
+    color: #2196f3;
   }
 
   &__contact {
@@ -310,7 +338,7 @@
     color: #2196f3;
   }
 
-  &__socioal-offset {
-    padding-left: 10px;
-  }
+  // &__socioal-offset {
+  //   padding-left: 10px;
+  // }
 }
